@@ -28,7 +28,7 @@ const LoginForm = () => {
         console.log(responce.data.username)
         dispatch(setLogin(responce.data));
         if (values.username === responce.data.username && values.password === responce.data.password) {
-          navigate('/home');
+          navigate('/profile');
         } else {
           setAuthFailed(true);
         }

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 const Home = () => {
   const { username } = useSelector((state) => state.user);
   return (
-    <div>Welcome { username } </div>
+    <div><h1>Welcome { username }</h1></div>
   )
 }
 

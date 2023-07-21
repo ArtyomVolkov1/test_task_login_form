@@ -9,7 +9,7 @@ const PrivatePage = () => {
   const { username } = useSelector((state) => state.user);
   const location = useLocation();
   return (
-    username ? <MainPage /> : <Navigate to="/login" state={{ from: location }} />
+    username ? <MainPage /> : <Navigate to="/profile" state={{ from: location }} />
   )
 };
 
@@ -17,9 +17,8 @@ const App = () => {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={null} />
-      <Route path='/login' element={<LoginPage />} />
-      <Route path='/home' element={<PrivatePage />} />
+      <Route path='/' element={<LoginPage />} />
+      <Route path='/profile' element={<PrivatePage />} />
     </Routes>
     </BrowserRouter>
   )
